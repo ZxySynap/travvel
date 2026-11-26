@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport">
+	<title>หน้าแรก | เที่ยวบ้าน</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<p class="site-name">เที่ยวบ้านเรา</p>
+		<nav aria-label="เมนูหลัก">
+			<ul>
+				<li><a href="index.html">หน้าแรก</a></li>
+				<li><a href="places.html">ที่เที่ยว</a></li>
+				<li><a href="food.html">อาหาร</a></li>
+				<li><a href="plan.html">วางแผนเที่ยว</a></li>
+				<li><a href="travel.html">ข้อมูลการเดินทาง</a></li>
+				<li><a href="login.html">เข้าสู่ระบบ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>เที่ยวบ้านเราในหนึ่งวัน</h1>
+		<h2 align="center">สถานที่ท่องเที่ยวจังหวัดประจวบคีรีขันธ์</h2>
+		<section class="image-slider">
+    			<div class="slides">
+        				<img src="images/aomanow.jpg" class="slide active">
+        				<img src="images/Kaow.jpg" class="slide">
+        				<img src="images/KLM.jpg" class="slide">
+				<img src="images/lukmuang.jpg" class="slide">
+				<img src="images/sapanpla.jpg" class="slide">
+    			</div>
+
+    			<div class="slider-dots">
+        				<span class="dot active" onclick="showSlide(0)"></span>
+        				<span class="dot" onclick="showSlide(1)"></span>
+        				<span class="dot" onclick="showSlide(2)"></span>
+				<span class="dot" onclick="showSlide(3)"></span>
+				<span class="dot" onclick="showSlide(4)"></span>
+    			</div>
+		</section>
+		<p>ชวนเดินตลาด ชิมอาหารพื้นถิ่น และพักชมวิวในชุมชน<p>
+		<section class="card">
+			<h2>เริ่มจากจุดที่คุณสนใจ</h2>
+			<p>เลือกสถานที่ที่อยากไป แล้วจัดเส้นทางให้เหมาะกับเวลาของคุณ</p>
+			<a class="button" href="places.html">ดูแหล่งท่องเที่ยว</a>
+		</section>
+	</main>
+	<footer>
+		<p>บุณยรักษ์ จันทร์แก้ว 67219100058 ใบงานฝึกปฏิบัติวิชาการสร้างเว็บไซต์ทางธุรกิจ</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

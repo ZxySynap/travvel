@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | เที่ยวบ้านเรา</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<p class="site-name">เที่ยวบ้านเรา</p>
+		<nav aria-label="เมนูหลัก">
+			<ul>
+				<li><a href="index.html">หน้าแรก</a></li>
+				<li><a href="places.html">ที่เที่ยว</a></li>
+				<li><a href="food.html">อาหาร</a></li>
+				<li><a href="plan.html">วางแผนเที่ยว</a></li>
+				<li><a href="travel.html">ข้อมูลการเดินทาง</a></li>
+				<li><a href="login.html">เข้าสู่ระบบ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="login-container">
+	<div class="login-box">
+		<h1>เข้าสู่ระบบ</h1>
+		<form id="loginForm">
+			<div class="input-group">
+				<label for="username">ชื่อผู้ใช้</label>
+				<input type="text" id="username" placeholder="กรอกชื่อผู้ใช้" required>
+                		</div>
+			<div class="input-group">
+				<label for="password">รหัสผ่าน</label>
+				<div class="password-box">
+					<input type="password" id="password" placeholder="กรอกรหัสผ่าน" required>
+                        				<button type="button" id="togglePassword">แสดง</button>
+                    			</div>
+                		</div>
+                		<div class="options">
+                    			<label>
+                    				<input type="checkbox" id="remember">จดจำฉัน
+                    			</label>
+                    			<a href="#" id="forgotPassword">ลืมรหัสผ่าน?</a>
+                		</div>
+			<button type="submit" class="login-btn">เข้าสู่ระบบ</button>
+                		<p id="message"></p>
+		</form>
+		<div class="back-home">
+			<a href="index.html">กลับสู่หน้าหลัก</a>
+		</div>
+	</div>
+    	</div>
+  	<footer>
+		<p>บุณยรักษ์ จันทร์แก้ว 67219100058 ใบงานฝึกปฏิบัติวิชาการสร้างเว็บไซต์ทางธุรกิจ</p>
+	</footer>
+	<script src="script.js"></script>
+
+</body>
+</html>
