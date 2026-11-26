@@ -16,15 +16,10 @@ setInterval(() => {
     showSlide(currentSlide + 1);
 }, 4000);
 
-
-const loginForm = document.getElementById("loginForm");
-const username = document.getElementById("username");
 const password = document.getElementById("password");
 const togglePassword = document.getElementById("togglePassword");
-const message = document.getElementById("message");
 
-// แสดง / ซ่อนรหัสผ่าน
-togglePassword.addEventListener("click", function() {
+togglePassword.addEventListener("click", function () {
 
     if (password.type === "password") {
         password.type = "text";
@@ -36,34 +31,58 @@ togglePassword.addEventListener("click", function() {
 
 });
 
-// ตรวจสอบการเข้าสู่ระบบ
-loginForm.addEventListener("submit", function(event) {
+// ระบบเข้าสู่ระบบ
+const loginForm = document.getElementById("loginForm");
+const message = document.getElementById("message");
 
-    event.preventDefault();
+loginForm.addEventListener("submit", function (e) {
 
-    const user = username.value.trim();
-    const pass = password.value;
+    e.preventDefault();
 
-    if (user === "" || pass === "") {
-        message.style.color = "red";
-        message.textContent = "กรุณากรอกข้อมูลให้ครบ";
+    const userType = document.getElementById("userType").value;
+    const username = document.getElementById("username").value.trim();
+    const passwordValue = password.value;
+
+    // บัญชีทดลอง
+    const accounts = {
+        admin: {
+            username: "admin",
+            password: "admin123",
+            role: "ผู้ดูแลระบบ (Admin)"
+        },
+
+        user: {
+            username: "user",
+            password: "usertest1",
+            role: "สมาชิกทั่วไป (User)"
+        }
+    };
+
+    // ตรวจสอบประเภทผู้ใช้งาน
+    if (!userType) {
+        message.className = "error";
+        message.textContent = "กรุณาเลือกประเภทผู้ใช้งาน";
         return;
     }
 
-    // ตัวอย่างสำหรับทดลองใช้งานเท่านั้น
-    if (user === "admin" && pass === "123456") {
+    const account = accounts[userType];
 
-        message.style.color = "green";
-        message.textContent = "เข้าสู่ระบบสำเร็จ!";
+    // ตรวจสอบชื่อผู้ใช้และรหัสผ่าน
+    if (
+        username === account.username &&
+        passwordValue === account.password
+    ) {
 
-        setTimeout(function() {
-            window.location.href = "index.html";
-        }, 1000);
+        message.className = "success";
+        message.innerHTML =
+            "✓ เข้าสู่ระบบสำเร็จ!<br>" +
+            "ยินดีต้อนรับ " + account.role;
 
     } else {
 
-        message.style.color = "red";
-        message.textContent = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
+        message.className = "error";
+        message.textContent =
+            "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง";
 
     }
 
@@ -71,7 +90,10 @@ loginForm.addEventListener("submit", function(event) {
 
 // ลืมรหัสผ่าน
 document.getElementById("forgotPassword")
-    .addEventListener("click", function(event) {
-        event.preventDefault();
-        alert("กรุณาติดต่อผู้ดูแลระบบเพื่อรีเซ็ตรหัสผ่าน");
+    .addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        alert("กรุณาติดต่อผู้ดูแลระบบเพื่อขอรีเซ็ตรหัสผ่าน");
+
     });

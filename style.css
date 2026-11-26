@@ -124,6 +124,30 @@ img {
         height: 250px;
     }
 }
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #A86929;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #A86929;
+}
 
 .login-container {
     width: 100%;
@@ -253,4 +277,47 @@ img {
     .login-box {
         padding: 25px 20px;
     }
+}
+
+.demo-account {
+    background: #edf7f1;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.demo-account h3 {
+    color: #A86929;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Message */
+#message {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.success {
+    color: #16834d;
+    background: #e4f7eb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.error {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Back Home */
+.back-home {
+    text-align: center;
+    margin-top: 22px;
 }
